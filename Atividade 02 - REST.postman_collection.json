@@ -1,0 +1,278 @@
+{
+	"info": {
+		"_postman_id": "32792a44-22e4-4f03-b064-6334b2429594",
+		"name": "Atividade 02 - REST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "via cep",
+			"item": [
+				{
+					"name": "Consulta por Rua da Cidade",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "viacep.com.br/ws/SP/Aracatuba/Cristiano/json/",
+							"host": [
+								"viacep",
+								"com",
+								"br"
+							],
+							"path": [
+								"ws",
+								"SP",
+								"Aracatuba",
+								"Cristiano",
+								"json",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta por Cep",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "viacep.com.br/ws/16018305/json/",
+							"host": [
+								"viacep",
+								"com",
+								"br"
+							],
+							"path": [
+								"ws",
+								"16018305",
+								"json",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consulta por Cep retorno formato XML",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "viacep.com.br/ws/16018305/xml/",
+							"host": [
+								"viacep",
+								"com",
+								"br"
+							],
+							"path": [
+								"ws",
+								"16018305",
+								"xml",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "biblia digital",
+			"item": [
+				{
+					"name": "Busca todos os livros da biblia",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.abibliadigital.com.br/api/books",
+							"protocol": "https",
+							"host": [
+								"www",
+								"abibliadigital",
+								"com",
+								"br"
+							],
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca livro especifico por abbrev",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.abibliadigital.com.br/api/books/gn",
+							"protocol": "https",
+							"host": [
+								"www",
+								"abibliadigital",
+								"com",
+								"br"
+							],
+							"path": [
+								"api",
+								"books",
+								"gn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca todas as versões",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.abibliadigital.com.br/api/versions",
+							"protocol": "https",
+							"host": [
+								"www",
+								"abibliadigital",
+								"com",
+								"br"
+							],
+							"path": [
+								"api",
+								"versions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retorna um verso aleatorio a partir de uma versão",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.abibliadigital.com.br/api/verses/acf/random",
+							"protocol": "https",
+							"host": [
+								"www",
+								"abibliadigital",
+								"com",
+								"br"
+							],
+							"path": [
+								"api",
+								"verses",
+								"acf",
+								"random"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "mercado livre",
+			"item": [
+				{
+					"name": "informações usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "APP_USR-6709973558718242-031916-781726f98abfa817b108f9410df02ade-3884926",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.mercadolibre.com/users/711763107",
+							"protocol": "https",
+							"host": [
+								"api",
+								"mercadolibre",
+								"com"
+							],
+							"path": [
+								"users",
+								"711763107"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultar item",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "APP_USR-6709973558718242-031916-781726f98abfa817b108f9410df02ade-3884926",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.mercadolibre.com/items/MLB1306979255",
+							"protocol": "https",
+							"host": [
+								"api",
+								"mercadolibre",
+								"com"
+							],
+							"path": [
+								"items",
+								"MLB1306979255"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar itens do usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "APP_USR-6709973558718242-031916-781726f98abfa817b108f9410df02ade-3884926",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.mercadolibre.com/users/3884926/items/search",
+							"protocol": "https",
+							"host": [
+								"api",
+								"mercadolibre",
+								"com"
+							],
+							"path": [
+								"users",
+								"3884926",
+								"items",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
